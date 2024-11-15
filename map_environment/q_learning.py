@@ -5,15 +5,20 @@ import time
 t1 = time.time()
 
 dataset = 'trajectory.csv'
-file_path = f'/Users/ankushdhawan/Documents/Stanford/Coterm/CS238/aa228_project/map_environment/map_files{dataset}.csv'
+file_path = f'map_environment/map_files/{dataset}'
 data = pd.read_csv(file_path)
 
 # print(data.head())
 
-s = data['s'] - 1 # subtract 1 to make 0-indexed
-a = data['a'] - 1 # subtract 1 to make 0-indexed
+# s = data['s'] - 1 # subtract 1 to make 0-indexed
+# a = data['a'] - 1 # subtract 1 to make 0-indexed
+# r = data['r']
+# sp = data['sp'] - 1 # subtract 1 to make 0-indexed
+
+s = data['s'] # subtract 1 to make 0-indexed
+a = data['a'] # subtract 1 to make 0-indexed
 r = data['r']
-sp = data['sp'] - 1 # subtract 1 to make 0-indexed
+sp = data['sp'] # subtract 1 to make 0-indexed
 
 num_actions = 4
 num_states = 100
@@ -39,16 +44,17 @@ def q_learning_update(q_learning, state, action, reward, next_state):
 
     return q_learning
 
-def simulate(q_learning, s, a, r, sp, num_episodes=100):
-    print(len(s))
+def simulate(q_learning, s, a, r, sp, num_episodes=10):
+    print("Running simulation")
     for episode in range(num_episodes):
         for i in range(len(s)):
+            # print(i)
             state = s[i]
             action = a[i]
             reward = r[i]
             next_state = sp[i]
             # print(i)
-            # print(next_state)
+            # print(f"Episode: {episode}, State: {state}, Action: {action}, Reward: {reward}, Next State: {next_state}")
             q_learning = q_learning_update(q_learning, state, action, reward, next_state)
 
     return q_learning
@@ -58,7 +64,7 @@ def get_policy(q_learning):
     return policy
 
 q_opt = simulate(q_learning, s, a, r, sp)
-policy = get_policy(q_opt) + 1 # add 1 to make 1-indexed
+policy = get_policy(q_opt) # add 1 to make 1-indexed
 
 
 save_policy(policy, f"{dataset}.policy")

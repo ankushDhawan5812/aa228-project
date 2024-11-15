@@ -26,14 +26,27 @@ def load_grid_with_positions(file_path):
                 grid[x][y] = reward
     return np.array(grid), start_pos, goal_pos
 
-
 def index_to_state(x, y, grid_shape):
-    """Convert (x, y) coordinates to a single state index with 1-based indexing."""
-    return np.ravel_multi_index((x, y), grid_shape) + 1
+    idx_str = f"{y}{x}"
+    idx = int(idx_str)
+    print(f"x: {x}, y: {y}, index: {idx} ")
+    return idx
 
 def state_to_index(s, grid_shape):
-    """Convert a single state index back to (x, y) coordinates with 1-based indexing."""
-    return np.unravel_index(s - 1, grid_shape)
+    s_str = str(s)
+    x = int(s_str[1])
+    y = int(s_str[0])
+    return x, y
+
+# def index_to_state(x, y, grid_shape):
+#     """Convert (x, y) coordinates to a single state index with 1-based indexing."""
+#     print(f"x: {x}, y: {y}, index: {np.ravel_multi_index((x, y), grid_shape)} ")
+
+#     return np.ravel_multi_index((x, y), grid_shape)
+
+# def state_to_index(s, grid_shape):
+#     """Convert a single state index back to (x, y) coordinates with 1-based indexing."""
+#     return np.unravel_index(s, grid_shape)
 
 def generate_random_trajectory(grid, start_pos=None, num_steps=10):
     """Generate a random trajectory of the agent through the environment."""
@@ -49,16 +62,26 @@ def generate_random_trajectory(grid, start_pos=None, num_steps=10):
 
     for _ in range(num_steps):
         # Choose a random action
-        action = random.randint(0, 4) + 1 # 1=N, 2=E, 3=S, 4=W
+        valid_actions = []
+        if y < grid_shape[0] - 1:  # North
+            valid_actions.append(0)
+        if x < grid_shape[1] - 1:  # East
+            valid_actions.append(1)
+        if y > 0:  # South
+            valid_actions.append(2)
+        if x > 0:  # West
+            valid_actions.append(3)
+
+        action = random.choice(valid_actions)
         dx, dy = 0, 0
-        if action == 1 and x > 0:  # North
-            dx = -1
-        elif action == 2 and y < grid_shape[1] - 1:  # East
-            dy = 1
-        elif action == 3 and x < grid_shape[0] - 1:  # South
+        if action == 0:  # North
+            dy = +1
+        elif action == 1:  # East
             dx = 1
-        elif action == 4 and y > 0:  # West
+        elif action == 2:  # South
             dy = -1
+        elif action == 3:  # West
+            dx = -1
 
         # Update position
         new_x, new_y = x + dx, y + dy
