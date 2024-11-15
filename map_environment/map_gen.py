@@ -3,50 +3,96 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
 import csv
 
-# Initialize a 10x10 grid with all zeros
-grid = np.zeros((10, 10))
+def create_grid(size=(10, 10), start_pos=(0, 0), goal_pos=(9, 9), collision_positions=None):
+    """
+    Create a grid with specified start, goal, and collision positions.
 
-# Define positions
-start_pos = (0, 0)  # Starting position at the top-left
-goal_pos = (9, 9)   # Goal position at the bottom-right
-collision_positions = [(3, 3), (3, 4), (4, 3), (4, 4)]  # Example obstacles
+    Args:
+        size (tuple): Dimensions of the grid (rows, cols).
+        start_pos (tuple): Coordinates of the starting position.
+        goal_pos (tuple): Coordinates of the goal position.
+        collision_positions (list of tuples): Coordinates of obstacle positions.
 
-# Assign rewards
-grid[start_pos] = 0    # Starting position (neutral)
-grid[goal_pos] = 10    # Large positive reward at the goal
-for pos in collision_positions:
-    grid[pos] = -10    # Large negative reward at collision points
+    Returns:
+        np.ndarray: The generated grid with rewards.
+    """
+    grid = np.zeros(size)
 
-# Define color map
-cmap = ListedColormap(['white', 'lightcoral', 'lightgreen'])
-bounds = [-10, -1, 1, 9, 11]
-norm = plt.Normalize(vmin=-10, vmax=10)
+    # Assign rewards
+    grid[start_pos] = 0  # Starting position (neutral)
+    grid[goal_pos] = 10  # Large positive reward at the goal
+    if collision_positions:
+        for pos in collision_positions:
+            grid[pos] = -10  # Large negative reward at collision points
 
-# Create the plot with corrected alignment and adjusted coordinates
-plt.figure(figsize=(6, 6))
-plt.imshow(grid, cmap=cmap, norm=norm, origin="lower", extent=[-1, 9, -1, 9])
-plt.colorbar(label='Rewards', ticks=[-10, 0, 10])
+    return grid
 
-# Annotate the start and goal with adjusted positions
-plt.text(start_pos[1] - 0.5, start_pos[0] - 0.5, 'S', ha='center', va='center', color='blue', fontsize=12, fontweight='bold')
-plt.text(goal_pos[1] - 0.5, goal_pos[0] - 0.5, 'G', ha='center', va='center', color='blue', fontsize=12, fontweight='bold')
+def plot_grid(grid, start_pos, goal_pos):
+    """
+    Plot the grid with rewards, annotations, and properly formatted axes.
 
-# Set grid lines and labels for better alignment
-plt.xticks(np.arange(-1, 10, 1))
-plt.yticks(np.arange(-1, 10, 1))
-plt.gca().set_xticks(np.arange(-1, 10, 1) + 0.5, minor=True)
-plt.gca().set_yticks(np.arange(-1, 10, 1) + 0.5, minor=True)
-plt.grid(which="minor", color="gray", linestyle="--", linewidth=0.5)
+    Args:
+        grid (np.ndarray): The grid to plot.
+        start_pos (tuple): Coordinates of the starting position.
+        goal_pos (tuple): Coordinates of the goal position.
+    """
+    grid_shape = grid.shape
+    cmap = ListedColormap(['lightcoral', 'white', 'lightgreen'])
+    norm = plt.Normalize(vmin=-10, vmax=10)
 
-# Title and display
-plt.title("10x10 Grid World Starting at (-1, -1)")
-plt.show()
+    plt.figure(figsize=(6, 6))
+    plt.imshow(grid, cmap=cmap, norm=norm, origin="lower", extent=[0, grid_shape[1], 0, grid_shape[0]])
+    plt.colorbar(label='Rewards', ticks=[-10, 0, 10])
 
-# Save the grid world to a CSV file
-csv_filename = '/Users/ankushdhawan/Documents/Stanford/Coterm/CS238/aa228_project/map_environment/map_files/grid_world.csv'
-with open(csv_filename, mode='w', newline='') as file:
-    writer = csv.writer(file)
-    writer.writerow(['x', 'y', 'reward'])
-    for x in range(grid.shape[0]):
-        for y in range(grid.shape[1]):
-            writer.writerow([x, y, grid[x, y]])
+    # Annotate the start and goal
+    plt.text(start_pos[1] + 0.5, start_pos[0] + 0.5, 'S', ha='center', va='center', color='blue', fontsize=12, fontweight='bold')
+    plt.text(goal_pos[1] + 0.5, goal_pos[0] + 0.5, 'G', ha='center', va='center', color='blue', fontsize=12, fontweight='bold')
+
+    # Set grid lines without changing the tick positions
+    plt.xticks(np.arange(0, grid_shape[1], 1), labels=[""] * grid_shape[1])
+    plt.yticks(np.arange(0, grid_shape[0], 1), labels=[""] * grid_shape[0])
+    plt.grid(which="major", color="gray", linestyle="--", linewidth=0.5)
+
+    # Add shifted axis labels
+    for i in range(grid_shape[1]):
+        plt.text(i + 0.5, -0.5, str(i), ha='center', va='center', fontsize=10, transform=plt.gca().transData)
+    for i in range(grid_shape[0]):
+        plt.text(-0.5, i + 0.5, str(i), ha='center', va='center', fontsize=10, transform=plt.gca().transData)
+
+    plt.title("Grid World")
+
+def save_grid(grid, start_pos, goal_pos, file_path):
+    """
+    Save the grid world to a CSV file with start and goal positions.
+
+    Args:
+        grid (np.ndarray): The grid to save.
+        start_pos (tuple): The starting position.
+        goal_pos (tuple): The goal position.
+        file_path (str): Path to save the grid CSV file.
+    """
+    with open(file_path, mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['x', 'y', 'reward'])
+        for x in range(grid.shape[0]):
+            for y in range(grid.shape[1]):
+                writer.writerow([x, y, grid[x, y]])
+        writer.writerow(['start', start_pos[0], start_pos[1]])
+        writer.writerow(['goal', goal_pos[0], goal_pos[1]])
+
+if __name__ == "__main__":
+    # Parameters
+    grid_size = (10, 10)
+    start_position = (0, 0)
+    goal_position = (9, 9)
+    collisions = [(3, 3), (3, 4), (4, 3), (4, 4)]
+
+    # Create the grid
+    grid = create_grid(size=grid_size, start_pos=start_position, goal_pos=goal_position, collision_positions=collisions)
+
+    # Plot the grid
+    plot_grid(grid, start_pos=start_position, goal_pos=goal_position)
+    plt.show()
+
+    # Save the grid to a CSV file
+    save_grid(grid, start_position, goal_position, 'map_environment/map_files/gridworldml.csv')
