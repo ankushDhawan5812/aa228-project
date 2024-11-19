@@ -42,8 +42,6 @@ def epsilon_greedy_policy(Q, state, epsilon=0.1):
         return np.random.randint(len(Q[state]))  # Explore: random action
     else:
         return np.argmax(Q[state])  # Exploit: best action
-    # return np.argmax(Q[state])
-
 
 def sarsa_update(sarsa, state, action, reward, next_state, next_action):
     """
