@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
 
 # Load the policy from the file
-policy_file = 'trajectory.policy'
+policy_file = 'trajectory_sarsa.policy'
 policy = np.loadtxt(policy_file, dtype=int)
 
 # Load the rewards from the file using pandas
@@ -58,6 +58,6 @@ ax.set_xticks([])
 ax.set_yticks([])
 
 # Save the figure
-plt.savefig('policy_visualization.png')
+plt.savefig('policy_visualization_sarsa.png')
 
 plt.show()
