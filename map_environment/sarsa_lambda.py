@@ -32,7 +32,8 @@ class SarsaLambda:
         self.S = range(state_space_size)
         self.A = range(action_space_size)
         # self.Q = np.random.rand(state_space_size, action_space_size) * 0.01     # Randomly initialized value function
-        self.Q = np.zeros((state_space_size, action_space_size))              # Zeroized initialized value function
+        # self.Q = np.zeros((state_space_size, action_space_size))              # Zeroized initialized value function
+        self.Q = np.full((state_space_size, action_space_size), -100.0) 
         self.gamma = 0.95                                                       #reward discount rate (γ)
         self.lr = 0.09                                                          #learning rate (α)
         self.lam = 0.5                                                         #trace decay rate (λ)
@@ -104,7 +105,7 @@ def sarsaLam_update(sarsaLam, state, action, reward, next_state):
             for a in valid_actions:
                 sarsaLam.Q[s, a] += alpha * delta * sarsaLam.N[s, a]  # Update Q for valid s, a
                 sarsaLam.N[s, a] *= gamma * lam  # Decay trace for valid s, a
-
+        
     else:
         sarsaLam.N.fill(0.0)
 
@@ -128,8 +129,8 @@ def check_border(s):
 def state_to_index(s, grid_shape):
     s_str = str(s)
     if s < 10:  # Handle single-digit states
-        x = 0
-        y = s
+        x = s
+        y = 0
     else:
         x = int(s_str[1])  # Correct for double-digit states
         y = int(s_str[0])
