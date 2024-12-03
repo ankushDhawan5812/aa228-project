@@ -49,18 +49,23 @@ def state_to_index(s, grid_shape):
         y = int(s_str[0])
     return x, y
 
-def get_neighborhood(state):
+def get_neighborhood(state, shuffle):
     grid_shape = (10, 10)
     x, y = state_to_index(state, grid_shape)
     neighborhood = {}
-    if x > 0:
-        neighborhood[state - 1] = 'left'
-    if x < grid_shape[1] - 1:
-        neighborhood[state + 1] = 'right'
-    if y > 0:
-        neighborhood[state - 10] = 'down'
     if y < grid_shape[0] - 1:
         neighborhood[state + 10] = 'up'
+    if y > 0:
+        neighborhood[state - 10] = 'down'
+    if x < grid_shape[1] - 1:
+        neighborhood[state + 1] = 'right'
+    if x > 0:
+        neighborhood[state - 1] = 'left'
+    if shuffle:
+        neighborhood_items = list(neighborhood.items())
+        np.random.shuffle(neighborhood_items)
+        neighborhood = dict(neighborhood_items)
+    
     return neighborhood
 
 def execute_action(state, action):
@@ -100,6 +105,7 @@ def get_reward_from_neighbors(neighborhood, grid, previously_visited, revisit_pe
         rewards[neighbor] = get_reward(x, y, grid)
         if neighbor in previously_visited: # Penalize revisiting previously visited states with large negative reward
             num_instances = previously_visited.count(neighbor)
+            # num_instances = 1
             rewards[neighbor] = revisit_penalty * num_instances # compound penalty based on number of times revisited
     # print(f"Rewards: {rewards}")
     return rewards
@@ -116,13 +122,13 @@ def get_plan(cur_state, neighbor_states, actions, rewards):
     best_action = actions[best_action_index]
     return [best_action]
 
-def mpc_loop(start_state, max_steps, grid, goal_state=99, revisit_penalty=-100):
+def mpc_loop(start_state, max_steps, grid, goal_state=99, revisit_penalty=-100, shuffle=False):
     states = []
     state = start_state
     states.append(start_state) # appending start state to already visited
     actions_opt = []
-    for _ in range(max_steps):
-        n = get_neighborhood(state)
+    for i in range(max_steps):
+        n = get_neighborhood(state, shuffle)
         actions = list(n.values())
         neighbor_states = list(n.keys())
         rewards = list(get_reward_from_neighbors(n, grid, states, revisit_penalty).values())
@@ -138,7 +144,7 @@ def mpc_loop(start_state, max_steps, grid, goal_state=99, revisit_penalty=-100):
         actions_opt.append(plan_horizon[0])
         
         if state == goal_state:
-            print("Reached goal!")
+            print(f"Reached goal in {i} steps")
             return states, actions_opt
         
     return states, actions_opt
@@ -189,8 +195,8 @@ start_state = 0
 goal_state = 99
 max_iters = 200
 revisit_penalty = -1
-states, actions_opt = mpc_loop(start_state, max_iters, grid, goal_state, revisit_penalty)
-
+shuffle = True
+states, actions_opt = mpc_loop(start_state, max_iters, grid, goal_state, revisit_penalty, shuffle)
 
 print("STATES: ", states)
 print("ACTIONS: ", actions_opt)
