@@ -121,7 +121,7 @@ def get_plan(cur_state, neighbor_states, actions, rewards):
     best_action = actions[best_action_index]
     return [best_action]
 
-def mpc_loop(start_state, max_steps, grid):
+def mpc_loop(start_state, max_steps, grid, goal_state=99):
     states = []
     state = start_state
     actions_opt = []
@@ -139,9 +139,10 @@ def mpc_loop(start_state, max_steps, grid):
         plan_horizon = get_plan(state, neighbor_states, actions, rewards)
         state = execute_action(state, plan_horizon[0]) # execute action with first action of the horizon 
         if state in states:
-            print(f"Revisiting state: {state}")
-        if state == 99:
-            print("Reached goal")
+            print(f"Revisiting state: {state}...")
+        if state == goal_state:
+            print("Reached goal!")
+            break
         states.append(state)
         actions_opt.append(plan_horizon[0])
     return states, actions_opt
@@ -152,41 +153,6 @@ def get_policy(q_learning):
 
 grid = pd.read_csv('map_environment/map_files/gridworldad.csv')
 
-states, actions_opt = mpc_loop(0, 100, grid)
+states, actions_opt = mpc_loop(0, 100, grid, 99)
 print(states)
 print(actions_opt)
-
-r = get_reward(0, 7, grid)
-print(r)
-
-# x = 4
-# y = 3
-# print(f"Reward at ({x}, {y}): {get_reward(x, y, grid)}")
-
-# state = 10
-# n = get_neighborhood(state)
-# print(f"Neighborhood of {state}: {n}")
-
-# next_state = execute_action(state, 'left')
-# print(next_state)
-# r_neighbors = get_reward_from_neighbors(n, grid)
-# print(f"Rewards of neighbors: {r_neighbors}")
-
-# grid_shape = (10, 10)
-# start_state = 0
-# max_steps = 10
-# state = 55
-# print(f"{state} state state: {state_to_index(state, grid_shape)}")
-# print(f"{state} state neighborhood: {get_neighborhood(state)}")
-
-# q_opt = simulate(q_learning, s, a, r, sp)
-# policy = get_policy(q_opt) # add 1 to make 1-indexed
-
-
-# save_policy(policy, f"{dataset}.policy")
-
-
-# t2 = time.time()
-
-# print(f"Runtime: {t2-t1}")
-
