@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 import time
@@ -11,13 +12,7 @@ data = pd.read_csv(file_path)
 s = data['s'] # subtract 1 to make 0-indexed
 a = data['a'] # subtract 1 to make 0-indexed
 r = data['r']
-sp = data['sp'] # subtract 1 to make 0-indexed
-
-def save_policy(policy, file_path):
-    print(type(policy))
-    with open(file_path, "w") as f:
-        for si in range(100):
-            f.write(f"{policy[si]}\n")
+sp = data['sp'] # subtract 1 to make 0-indexeds
 
 class QLearning:
     def __init__(self, state_space_size, action_space_size):
@@ -35,7 +30,6 @@ def simulate(q_learning, s, a, r, sp, num_episodes=10):
     # print("Running simulation")
     for episode in range(num_episodes):
         for i in range(len(sp)):
-            # print(i)
             action = a[i]
             reward = r[i]
             next_state = sp[i]
@@ -96,7 +90,7 @@ def get_reward(x, y, grid):
     reward_value = grid[(grid['x'] == x) & (grid['y'] == y)]['reward'].values[0]
     return reward_value
 
-def get_reward_from_neighbors(neighborhood, grid, previously_visited):
+def get_reward_from_neighbors(neighborhood, grid, previously_visited, revisit_penalty):
     rewards = {}
     n = neighborhood.keys()
     grid_shape = (10, 10)
@@ -105,8 +99,9 @@ def get_reward_from_neighbors(neighborhood, grid, previously_visited):
         x, y = state_to_index(neighbor, grid_shape)
         rewards[neighbor] = get_reward(x, y, grid)
         if neighbor in previously_visited: # Penalize revisiting previously visited states with large negative reward
-            rewards[neighbor] = -100
-    print(f"Rewards: {rewards}")
+            num_instances = previously_visited.count(neighbor)
+            rewards[neighbor] = revisit_penalty * num_instances # compound penalty based on number of times revisited
+    # print(f"Rewards: {rewards}")
     return rewards
 
 def get_plan(cur_state, neighbor_states, actions, rewards):
@@ -121,38 +116,82 @@ def get_plan(cur_state, neighbor_states, actions, rewards):
     best_action = actions[best_action_index]
     return [best_action]
 
-def mpc_loop(start_state, max_steps, grid, goal_state=99):
+def mpc_loop(start_state, max_steps, grid, goal_state=99, revisit_penalty=-100):
     states = []
     state = start_state
+    states.append(start_state) # appending start state to already visited
     actions_opt = []
-    for i in range(max_steps):
-        print(f"State: {state}")
-        # print(f"Step: {i}")
+    for _ in range(max_steps):
         n = get_neighborhood(state)
-        # print(f"Neighborhood: {n}")
         actions = list(n.values())
-        # print(f"Actions: {actions}")
         neighbor_states = list(n.keys())
-        # print(f"Neighbor states: {neighbor_states}")
-        rewards = list(get_reward_from_neighbors(n, grid, states).values())
-        # print(f"Rewards: {rewards}")
+        rewards = list(get_reward_from_neighbors(n, grid, states, revisit_penalty).values())
         plan_horizon = get_plan(state, neighbor_states, actions, rewards)
+        
         state = execute_action(state, plan_horizon[0]) # execute action with first action of the horizon 
+        print("next state: ", state)
+        print("actions: ", plan_horizon[0])
         if state in states:
             print(f"Revisiting state: {state}...")
-        if state == goal_state:
-            print("Reached goal!")
-            break
+
         states.append(state)
         actions_opt.append(plan_horizon[0])
+        
+        if state == goal_state:
+            print("Reached goal!")
+            return states, actions_opt
+        
     return states, actions_opt
+
+def visualize_optimal_actions(states, actions_opt):
+    grid_size = 10
+    grid = np.zeros((grid_size, grid_size), dtype=str)
+    grid[:] = ' '
+    goal_state = 99
+    goal_x, goal_y = state_to_index(goal_state, (grid_size, grid_size))
+    grid[grid_size - 1 - goal_y, goal_x] = 'G'
+
+    for state, action in zip(states, actions_opt):
+        x, y = state_to_index(state, (grid_size, grid_size))
+        arrow = None
+        if action == 'up':
+            arrow = '↑'
+        elif action == 'down':
+            arrow = '↓'
+        elif action == 'left':
+            arrow = '←'
+        elif action == 'right':
+            arrow = '→'
+        # print(f"arrow: {arrow}")
+        grid[grid_size - 1 - y, x] = arrow # Adjust for coordinate system
+
+    fig, ax = plt.subplots()
+    ax.matshow(np.zeros((grid_size, grid_size)), cmap='Greys')
+
+    for i in range(grid_size):
+        for j in range(grid_size):
+            ax.text(j, i, grid[i, j], va='center', ha='center')
+
+    ax.set_xticks(np.arange(grid_size))
+    ax.set_yticks(np.arange(grid_size))
+    ax.set_xticklabels(np.arange(grid_size))
+    ax.set_yticklabels(np.arange(grid_size)[::-1])
+    ax.xaxis.set_ticks_position('bottom')
+    ax.yaxis.set_ticks_position('left')
+    plt.show()
 
 def get_policy(q_learning):
     policy = np.argmax(q_learning.Q, axis=1)
     return policy
 
 grid = pd.read_csv('map_environment/map_files/gridworldad.csv')
+start_state = 0
+goal_state = 99
+max_iters = 200
+revisit_penalty = -1
+states, actions_opt = mpc_loop(start_state, max_iters, grid, goal_state, revisit_penalty)
 
-states, actions_opt = mpc_loop(0, 100, grid, 99)
-print(states)
-print(actions_opt)
+
+print("STATES: ", states)
+print("ACTIONS: ", actions_opt)
+visualize_optimal_actions(states, actions_opt)
