@@ -97,7 +97,7 @@ def get_reward(x, y, grid, obstacle_weight):
         reward_value *= obstacle_weight
     return reward_value
 
-def get_reward_from_neighbors(neighborhood, grid, previously_visited, revisit_penalty, goal_state, bias_factor, obstactle_weight):
+def get_reward_from_neighbors(neighborhood, grid, previously_visited, revisit_penalty, goal_state, bias_factor, obstacle_weight):
     rewards = {}
     n = neighborhood.keys()
     grid_shape = (10, 10)
@@ -158,7 +158,7 @@ def mpc_loop(start_state, max_steps, grid, goal_state=99, revisit_penalty=1, bia
         # Check if the current state is an obstacle
         obstacle = grid[(grid['x'] == state % 10) & (grid['y'] == state // 10)]['reward'].values[0] < 0
         if obstacle:
-            print(f"Hit an obstacle at state {state}!")
+            # print(f"Hit an obstacle at state {state}!")
             hit_obstacle = True
             break
 
@@ -166,7 +166,7 @@ def mpc_loop(start_state, max_steps, grid, goal_state=99, revisit_penalty=1, bia
         actions_opt.append(plan_horizon[0])
         
         if state == goal_state:
-            print(f"Reached goal in {i} steps")
+            # print(f"Reached goal in {i} steps")
             reached_goal = True
             return states, actions_opt, reached_goal, hit_obstacle, i
         
@@ -244,23 +244,23 @@ def get_policy(q_learning):
     policy = np.argmax(q_learning.Q, axis=1)
     return policy
 
-grid = pd.read_csv('map_environment/map_files/grid_world_3.csv')
-start_state = 0
-goal_state = 99
-max_iters = 1000
-revisit_penalty = 1
-bias_factor = 1
-obstacle_weight = 10
-shuffle = True
-states, actions_opt, reached_goal, hit_obstacle, steps_to_goal = mpc_loop(start_state, max_iters, grid, goal_state, revisit_penalty, bias_factor, obstacle_weight, shuffle)
+# grid = pd.read_csv('map_environment/map_files/grid_world_3.csv')
+# start_state = 0
+# goal_state = 99
+# max_iters = 1000
+# revisit_penalty = 1
+# bias_factor = 1
+# obstacle_weight = 10
+# shuffle = True
+# states, actions_opt, reached_goal, hit_obstacle, steps_to_goal = mpc_loop(start_state, max_iters, grid, goal_state, revisit_penalty, bias_factor, obstacle_weight, shuffle)
 
-print("STATES: ", states)
-print("ACTIONS: ", actions_opt)
-print(f"Reached goal? {reached_goal}")
-print(f'Hit obstacle? {hit_obstacle}')
+# print("STATES: ", states)
+# print("ACTIONS: ", actions_opt)
+# print(f"Reached goal? {reached_goal}")
+# print(f'Hit obstacle? {hit_obstacle}')
 
 
-visualize_optimal_actions(states, actions_opt, grid, start_state, goal_state)
+# visualize_optimal_actions(states, actions_opt, grid, start_state, goal_state)
 
 '''
 Results to record for each simulation:

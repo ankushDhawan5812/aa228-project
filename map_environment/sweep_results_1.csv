@@ -1,0 +1,364 @@
+grid,revisit_penalty,bias_factor,avg steps to goal,reached goal %,hit obstacle %,steps to goal list
+map_environment/map_files/grid_world_1.csv,0.0,0.0,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_2.csv,0.0,0.0,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_3.csv,0.0,0.0,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_1.csv,0.0,0.1,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.0,0.1,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_3.csv,0.0,0.1,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_1.csv,0.0,0.2,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.0,0.2,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_3.csv,0.0,0.2,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_1.csv,0.0,0.3,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.0,0.3,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_3.csv,0.0,0.3,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.0,0.4,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.0,0.4,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_3.csv,0.0,0.4,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.0,0.5,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.0,0.5,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_3.csv,0.0,0.5,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_1.csv,0.0,0.6,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.0,0.6,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_3.csv,0.0,0.6,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.0,0.7,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.0,0.7,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_3.csv,0.0,0.7,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.0,0.8,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.0,0.8,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_3.csv,0.0,0.8,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.0,0.9,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.0,0.9,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_3.csv,0.0,0.9,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.0,1.0,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.0,1.0,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_3.csv,0.0,1.0,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.1,0.0,47.0,0.5,0.0,[47]
+map_environment/map_files/grid_world_2.csv,0.1,0.0,75.0,1.0,0.0,"[73, 77]"
+map_environment/map_files/grid_world_3.csv,0.1,0.0,87.0,1.0,0.0,"[77, 97]"
+map_environment/map_files/grid_world_1.csv,0.1,0.1,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.1,0.1,63.0,1.0,0.0,"[71, 55]"
+map_environment/map_files/grid_world_3.csv,0.1,0.1,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.1,0.2,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.1,0.2,85.0,0.5,0.0,[85]
+map_environment/map_files/grid_world_3.csv,0.1,0.2,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.1,0.3,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.1,0.3,77.0,1.0,0.0,"[81, 73]"
+map_environment/map_files/grid_world_3.csv,0.1,0.3,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_1.csv,0.1,0.4,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.1,0.4,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_3.csv,0.1,0.4,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.1,0.5,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.1,0.5,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_3.csv,0.1,0.5,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.1,0.6,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.1,0.6,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_3.csv,0.1,0.6,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.1,0.7,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.1,0.7,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_3.csv,0.1,0.7,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_1.csv,0.1,0.8,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.1,0.8,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_3.csv,0.1,0.8,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_1.csv,0.1,0.9,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.1,0.9,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_3.csv,0.1,0.9,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.1,1.0,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.1,1.0,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_3.csv,0.1,1.0,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_1.csv,0.2,0.0,35.0,0.5,0.0,[35]
+map_environment/map_files/grid_world_2.csv,0.2,0.0,28.0,1.0,0.0,"[21, 35]"
+map_environment/map_files/grid_world_3.csv,0.2,0.0,55.0,1.0,0.0,"[79, 31]"
+map_environment/map_files/grid_world_1.csv,0.2,0.1,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.2,0.1,28.0,1.0,0.0,"[39, 17]"
+map_environment/map_files/grid_world_3.csv,0.2,0.1,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.2,0.2,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.2,0.2,28.0,1.0,0.0,"[39, 17]"
+map_environment/map_files/grid_world_3.csv,0.2,0.2,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.2,0.3,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.2,0.3,41.0,1.0,0.0,"[65, 17]"
+map_environment/map_files/grid_world_3.csv,0.2,0.3,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_1.csv,0.2,0.4,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.2,0.4,47.0,1.0,0.0,"[17, 77]"
+map_environment/map_files/grid_world_3.csv,0.2,0.4,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.2,0.5,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.2,0.5,49.0,1.0,0.0,"[81, 17]"
+map_environment/map_files/grid_world_3.csv,0.2,0.5,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.2,0.6,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.2,0.6,87.0,0.5,0.0,[87]
+map_environment/map_files/grid_world_3.csv,0.2,0.6,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.2,0.7,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.2,0.7,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_3.csv,0.2,0.7,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.2,0.8,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.2,0.8,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_3.csv,0.2,0.8,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.2,0.9,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.2,0.9,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_3.csv,0.2,0.9,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.2,1.0,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.2,1.0,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_3.csv,0.2,1.0,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.3,0.0,58.0,1.0,0.0,"[61, 55]"
+map_environment/map_files/grid_world_2.csv,0.3,0.0,40.0,1.0,0.0,"[33, 47]"
+map_environment/map_files/grid_world_3.csv,0.3,0.0,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_1.csv,0.3,0.1,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.3,0.1,67.0,1.0,0.0,"[59, 75]"
+map_environment/map_files/grid_world_3.csv,0.3,0.1,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.3,0.2,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.3,0.2,36.0,1.0,0.0,"[55, 17]"
+map_environment/map_files/grid_world_3.csv,0.3,0.2,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.3,0.3,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.3,0.3,58.0,1.0,0.0,"[41, 75]"
+map_environment/map_files/grid_world_3.csv,0.3,0.3,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.3,0.4,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.3,0.4,64.0,1.0,0.0,"[55, 73]"
+map_environment/map_files/grid_world_3.csv,0.3,0.4,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.3,0.5,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.3,0.5,42.0,1.0,0.0,"[67, 17]"
+map_environment/map_files/grid_world_3.csv,0.3,0.5,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.3,0.6,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.3,0.6,81.0,1.0,0.0,"[91, 71]"
+map_environment/map_files/grid_world_3.csv,0.3,0.6,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_1.csv,0.3,0.7,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.3,0.7,86.0,1.0,0.0,"[83, 89]"
+map_environment/map_files/grid_world_3.csv,0.3,0.7,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.3,0.8,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.3,0.8,81.0,0.5,0.0,[81]
+map_environment/map_files/grid_world_3.csv,0.3,0.8,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.3,0.9,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.3,0.9,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_3.csv,0.3,0.9,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.3,1.0,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.3,1.0,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_3.csv,0.3,1.0,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.4,0.0,68.0,1.0,0.0,"[65, 71]"
+map_environment/map_files/grid_world_2.csv,0.4,0.0,77.0,0.5,0.0,[77]
+map_environment/map_files/grid_world_3.csv,0.4,0.0,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_1.csv,0.4,0.1,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.4,0.1,69.0,1.0,0.0,"[93, 45]"
+map_environment/map_files/grid_world_3.csv,0.4,0.1,87.0,0.5,0.0,[87]
+map_environment/map_files/grid_world_1.csv,0.4,0.2,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.4,0.2,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_3.csv,0.4,0.2,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.4,0.3,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.4,0.3,58.0,1.0,0.0,"[57, 59]"
+map_environment/map_files/grid_world_3.csv,0.4,0.3,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.4,0.4,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.4,0.4,40.0,1.0,0.0,"[17, 63]"
+map_environment/map_files/grid_world_3.csv,0.4,0.4,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.4,0.5,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.4,0.5,63.0,1.0,0.0,"[69, 57]"
+map_environment/map_files/grid_world_3.csv,0.4,0.5,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.4,0.6,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.4,0.6,42.0,1.0,0.0,"[17, 67]"
+map_environment/map_files/grid_world_3.csv,0.4,0.6,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_1.csv,0.4,0.7,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.4,0.7,68.0,1.0,0.0,"[71, 65]"
+map_environment/map_files/grid_world_3.csv,0.4,0.7,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.4,0.8,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.4,0.8,74.0,1.0,0.0,"[83, 65]"
+map_environment/map_files/grid_world_3.csv,0.4,0.8,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.4,0.9,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.4,0.9,82.0,1.0,0.0,"[71, 93]"
+map_environment/map_files/grid_world_3.csv,0.4,0.9,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_1.csv,0.4,1.0,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.4,1.0,48.0,1.0,0.0,"[17, 79]"
+map_environment/map_files/grid_world_3.csv,0.4,1.0,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.5,0.0,57.0,1.0,0.0,"[45, 69]"
+map_environment/map_files/grid_world_2.csv,0.5,0.0,89.0,1.0,0.0,"[95, 83]"
+map_environment/map_files/grid_world_3.csv,0.5,0.0,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_1.csv,0.5,0.1,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.5,0.1,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_3.csv,0.5,0.1,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.5,0.2,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.5,0.2,62.0,1.0,0.0,"[65, 59]"
+map_environment/map_files/grid_world_3.csv,0.5,0.2,44.0,1.0,0.0,"[71, 17]"
+map_environment/map_files/grid_world_1.csv,0.5,0.3,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.5,0.3,33.0,1.0,0.0,"[17, 49]"
+map_environment/map_files/grid_world_3.csv,0.5,0.3,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.5,0.4,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.5,0.4,50.0,1.0,0.0,"[43, 57]"
+map_environment/map_files/grid_world_3.csv,0.5,0.4,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.5,0.5,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.5,0.5,71.0,1.0,0.0,"[77, 65]"
+map_environment/map_files/grid_world_3.csv,0.5,0.5,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.5,0.6,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.5,0.6,38.0,1.0,0.0,"[17, 59]"
+map_environment/map_files/grid_world_3.csv,0.5,0.6,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.5,0.7,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.5,0.7,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_3.csv,0.5,0.7,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.5,0.8,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.5,0.8,50.0,1.0,0.0,"[83, 17]"
+map_environment/map_files/grid_world_3.csv,0.5,0.8,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.5,0.9,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.5,0.9,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_3.csv,0.5,0.9,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.5,1.0,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.5,1.0,87.0,1.0,0.0,"[81, 93]"
+map_environment/map_files/grid_world_3.csv,0.5,1.0,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.6,0.0,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_2.csv,0.6,0.0,38.0,1.0,0.0,"[23, 53]"
+map_environment/map_files/grid_world_3.csv,0.6,0.0,66.0,1.0,0.0,"[63, 69]"
+map_environment/map_files/grid_world_1.csv,0.6,0.1,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.6,0.1,48.0,1.0,0.0,"[63, 33]"
+map_environment/map_files/grid_world_3.csv,0.6,0.1,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.6,0.2,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.6,0.2,39.0,1.0,0.0,"[17, 61]"
+map_environment/map_files/grid_world_3.csv,0.6,0.2,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.6,0.3,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.6,0.3,38.0,1.0,0.0,"[17, 59]"
+map_environment/map_files/grid_world_3.csv,0.6,0.3,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_1.csv,0.6,0.4,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.6,0.4,50.0,1.0,0.0,"[57, 43]"
+map_environment/map_files/grid_world_3.csv,0.6,0.4,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_1.csv,0.6,0.5,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.6,0.5,32.0,1.0,0.0,"[17, 47]"
+map_environment/map_files/grid_world_3.csv,0.6,0.5,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.6,0.6,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.6,0.6,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_3.csv,0.6,0.6,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_1.csv,0.6,0.7,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.6,0.7,64.0,1.0,0.0,"[79, 49]"
+map_environment/map_files/grid_world_3.csv,0.6,0.7,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.6,0.8,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.6,0.8,41.0,1.0,0.0,"[65, 17]"
+map_environment/map_files/grid_world_3.csv,0.6,0.8,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_1.csv,0.6,0.9,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.6,0.9,44.0,1.0,0.0,"[71, 17]"
+map_environment/map_files/grid_world_3.csv,0.6,0.9,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.6,1.0,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.6,1.0,45.0,1.0,0.0,"[73, 17]"
+map_environment/map_files/grid_world_3.csv,0.6,1.0,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.7,0.0,72.0,1.0,0.0,"[53, 91]"
+map_environment/map_files/grid_world_2.csv,0.7,0.0,80.0,1.0,0.0,"[99, 61]"
+map_environment/map_files/grid_world_3.csv,0.7,0.0,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_1.csv,0.7,0.1,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.7,0.1,30.0,1.0,0.0,"[43, 17]"
+map_environment/map_files/grid_world_3.csv,0.7,0.1,58.0,1.0,0.0,"[17, 99]"
+map_environment/map_files/grid_world_1.csv,0.7,0.2,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.7,0.2,38.0,1.0,0.0,"[59, 17]"
+map_environment/map_files/grid_world_3.csv,0.7,0.2,58.0,1.0,0.0,"[17, 99]"
+map_environment/map_files/grid_world_1.csv,0.7,0.3,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.7,0.3,37.0,1.0,0.0,"[17, 57]"
+map_environment/map_files/grid_world_3.csv,0.7,0.3,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.7,0.4,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.7,0.4,66.0,1.0,0.0,"[77, 55]"
+map_environment/map_files/grid_world_3.csv,0.7,0.4,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.7,0.5,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.7,0.5,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_3.csv,0.7,0.5,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_1.csv,0.7,0.6,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.7,0.6,39.0,1.0,0.0,"[61, 17]"
+map_environment/map_files/grid_world_3.csv,0.7,0.6,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.7,0.7,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.7,0.7,75.0,1.0,0.0,"[69, 81]"
+map_environment/map_files/grid_world_3.csv,0.7,0.7,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.7,0.8,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.7,0.8,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_3.csv,0.7,0.8,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.7,0.9,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.7,0.9,74.0,1.0,0.0,"[81, 67]"
+map_environment/map_files/grid_world_3.csv,0.7,0.9,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.7,1.0,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.7,1.0,79.0,1.0,0.0,"[87, 71]"
+map_environment/map_files/grid_world_3.csv,0.7,1.0,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_1.csv,0.8,0.0,63.0,1.0,0.0,"[45, 81]"
+map_environment/map_files/grid_world_2.csv,0.8,0.0,51.0,1.0,0.0,"[31, 71]"
+map_environment/map_files/grid_world_3.csv,0.8,0.0,51.0,0.5,0.0,[51]
+map_environment/map_files/grid_world_1.csv,0.8,0.1,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.8,0.1,54.0,1.0,0.0,"[67, 41]"
+map_environment/map_files/grid_world_3.csv,0.8,0.1,79.0,1.0,0.0,"[97, 61]"
+map_environment/map_files/grid_world_1.csv,0.8,0.2,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.8,0.2,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_3.csv,0.8,0.2,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.8,0.3,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.8,0.3,60.0,1.0,0.0,"[81, 39]"
+map_environment/map_files/grid_world_3.csv,0.8,0.3,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.8,0.4,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.8,0.4,42.0,1.0,0.0,"[39, 45]"
+map_environment/map_files/grid_world_3.csv,0.8,0.4,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.8,0.5,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.8,0.5,48.0,1.0,0.0,"[45, 51]"
+map_environment/map_files/grid_world_3.csv,0.8,0.5,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.8,0.6,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.8,0.6,31.0,1.0,0.0,"[45, 17]"
+map_environment/map_files/grid_world_3.csv,0.8,0.6,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_1.csv,0.8,0.7,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.8,0.7,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_3.csv,0.8,0.7,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_1.csv,0.8,0.8,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.8,0.8,64.0,1.0,0.0,"[45, 83]"
+map_environment/map_files/grid_world_3.csv,0.8,0.8,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.8,0.9,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.8,0.9,64.0,1.0,0.0,"[83, 45]"
+map_environment/map_files/grid_world_3.csv,0.8,0.9,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.8,1.0,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.8,1.0,50.0,1.0,0.0,"[51, 49]"
+map_environment/map_files/grid_world_3.csv,0.8,1.0,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.9,0.0,65.0,0.5,0.0,[65]
+map_environment/map_files/grid_world_2.csv,0.9,0.0,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_3.csv,0.9,0.0,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_1.csv,0.9,0.1,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.9,0.1,54.0,1.0,0.0,"[67, 41]"
+map_environment/map_files/grid_world_3.csv,0.9,0.1,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.9,0.2,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.9,0.2,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_3.csv,0.9,0.2,48.0,1.0,0.0,"[17, 79]"
+map_environment/map_files/grid_world_1.csv,0.9,0.3,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.9,0.3,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_3.csv,0.9,0.3,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.9,0.4,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.9,0.4,55.0,1.0,0.0,"[51, 59]"
+map_environment/map_files/grid_world_3.csv,0.9,0.4,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.9,0.5,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.9,0.5,36.0,1.0,0.0,"[55, 17]"
+map_environment/map_files/grid_world_3.csv,0.9,0.5,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.9,0.6,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.9,0.6,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_3.csv,0.9,0.6,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.9,0.7,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.9,0.7,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_3.csv,0.9,0.7,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,0.9,0.8,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.9,0.8,29.0,1.0,0.0,"[17, 41]"
+map_environment/map_files/grid_world_3.csv,0.9,0.8,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,0.9,0.9,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.9,0.9,43.0,1.0,0.0,"[69, 17]"
+map_environment/map_files/grid_world_3.csv,0.9,0.9,nan,0.0,0.5,[]
+map_environment/map_files/grid_world_1.csv,0.9,1.0,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,0.9,1.0,34.0,1.0,0.0,"[51, 17]"
+map_environment/map_files/grid_world_3.csv,0.9,1.0,nan,0.0,1.0,[]
+map_environment/map_files/grid_world_1.csv,1.0,0.0,29.0,0.5,0.0,[29]
+map_environment/map_files/grid_world_2.csv,1.0,0.0,60.0,1.0,0.0,"[49, 71]"
+map_environment/map_files/grid_world_3.csv,1.0,0.0,39.0,0.5,0.0,[39]
+map_environment/map_files/grid_world_1.csv,1.0,0.1,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,1.0,0.1,35.0,1.0,0.0,"[53, 17]"
+map_environment/map_files/grid_world_3.csv,1.0,0.1,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_1.csv,1.0,0.2,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,1.0,0.2,54.0,1.0,0.0,"[67, 41]"
+map_environment/map_files/grid_world_3.csv,1.0,0.2,nan,0.0,0.0,[]
+map_environment/map_files/grid_world_1.csv,1.0,0.3,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,1.0,0.3,50.0,1.0,0.0,"[33, 67]"
+map_environment/map_files/grid_world_3.csv,1.0,0.3,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,1.0,0.4,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,1.0,0.4,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_3.csv,1.0,0.4,42.0,1.0,0.0,"[17, 67]"
+map_environment/map_files/grid_world_1.csv,1.0,0.5,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,1.0,0.5,50.0,1.0,0.0,"[17, 83]"
+map_environment/map_files/grid_world_3.csv,1.0,0.5,53.0,1.0,0.0,"[89, 17]"
+map_environment/map_files/grid_world_1.csv,1.0,0.6,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,1.0,0.6,68.0,1.0,0.0,"[69, 67]"
+map_environment/map_files/grid_world_3.csv,1.0,0.6,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,1.0,0.7,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,1.0,0.7,35.0,1.0,0.0,"[17, 53]"
+map_environment/map_files/grid_world_3.csv,1.0,0.7,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,1.0,0.8,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,1.0,0.8,57.0,1.0,0.0,"[49, 65]"
+map_environment/map_files/grid_world_3.csv,1.0,0.8,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_1.csv,1.0,0.9,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,1.0,0.9,39.0,1.0,0.0,"[61, 17]"
+map_environment/map_files/grid_world_3.csv,1.0,0.9,17.0,0.5,0.0,[17]
+map_environment/map_files/grid_world_1.csv,1.0,1.0,17.0,1.0,0.0,"[17, 17]"
+map_environment/map_files/grid_world_2.csv,1.0,1.0,34.0,1.0,0.0,"[51, 17]"
+map_environment/map_files/grid_world_3.csv,1.0,1.0,17.0,0.5,0.0,[17]
