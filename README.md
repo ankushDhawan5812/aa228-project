@@ -36,13 +36,13 @@ To run the code here, the only requirements are numpy, pandas, and matplotlib. I
 To generate a map, run ``python map_environment/map_gen.py``. Modify the functions to generate different maps, defined in CSV files.
 
 ### Q-Learning
-To run Q-Learning, first explore a map by using ``python map_environment/sample_trajectories.py`` to output a CSV file containing the trajectory. Next, run Q-Learning with ``python map_environment/q_learning.py``, run SARSA with ``python map_environment/sarsa.py``, and SARSA-Lambda with ``python map_environment/saras_lambda.py``. The output of these will be ``.policy`` files. 
+To run Q-Learning, first explore a map by using ``python map_environment/sample_trajectories.py`` to output a CSV file containing the trajectory. Next, run Q-Learning with ``python map_environment/q_learning.py``, run SARSA with ``python map_environment/sarsa.py``, or SARSA-Lambda with ``python map_environment/saras_lambda.py``. The output of these will be ``.policy`` files. 
 
 ### Model Predictive Control
 To run MPC, plan and execute is done in the same file. Run a simulation with ``python map_environment/mpc.py``. Run the tuned MPC with ``python map_environment/mpc_tuning.py``
 
 ### Ablations
-To run the ablations and determine optimal parameters, run ``python map_environment/q_learning_sweeps.py`` for Q-Learning. For MPC, run ``python map_environment/mpc_experiments.py``
+To run the ablations and determine optimal parameters, run ``python map_environment/q_learning_sweeps.py`` for Q-Learning. For MPC, run ``python map_environment/mpc_experiments.py``. Ablations results are contained in the ``map_environment/results`` folder.
 
 
 
