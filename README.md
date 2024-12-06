@@ -33,7 +33,7 @@ Checkout our full paper linked here:
 To run the code here, the only requirements are numpy, pandas, and matplotlib. Install them with pip.
 
 ### Map generation
-To generate a map, run ``python map_environment/map_gen.py``. Modify the functions to generate differnt maps, defined in CSV files.
+To generate a map, run ``python map_environment/map_gen.py``. Modify the functions to generate different maps, defined in CSV files.
 
 ### Q-Learning
 To run Q-Learning, first explore a map by using ``python map_environment/sample_trajectories.py`` to output a CSV file containing the trajectory. Next, run Q-Learning with ``python map_environment/q_learning.py``, run SARSA with ``python map_environment/sarsa.py``, and SARSA-Lambda with ``python map_environment/saras_lambda.py``. The output of these will be ``.policy`` files. 
