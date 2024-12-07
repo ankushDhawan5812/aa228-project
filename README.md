@@ -5,7 +5,7 @@ In this project, we explore using Q-Learning and Model Predictive Control (MPC) 
 
 The agent must explore a variety of maps, shown below. We model the applied problem where the agent occupies a single state on a 10 by 10 grid, and must traverse a grid world where there are a variety of obstacles along the way. The blue region is the start state, red regions refer to obstacles with negative rewards, and the green region refers to the goal state with a positive reward.
 
-![Alt text](map_environment/map_imgs/blank_maps.png)
+![Alt text](map_environment/map_imgs/blankmaps.png)
 
 ## Implementations
 

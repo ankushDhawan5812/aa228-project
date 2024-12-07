@@ -4,18 +4,21 @@ import time
 
 t1 = time.time()
 
-dataset = 'trajectory'
-file_path = f'map_environment/map_files/{dataset}.csv'
+dataset = 'trajectory.csv'
+file_path = f'map_environment/map_files/{dataset}'
 data = pd.read_csv(file_path)
 
-# s = data['s'] - 1 # Uncomment if data uses 1-indexing and needs conversion to 0-indexing
-# a = data['a'] - 1
-# sp = data['sp'] - 1
+# print(data.head())
 
-s = data['s']  # Comment out if adjusting to 0-indexed
-a = data['a']
+# s = data['s'] - 1 # subtract 1 to make 0-indexed
+# a = data['a'] - 1 # subtract 1 to make 0-indexed
+# r = data['r']
+# sp = data['sp'] - 1 # subtract 1 to make 0-indexed
+
+s = data['s'] # subtract 1 to make 0-indexed
+a = data['a'] # subtract 1 to make 0-indexed
 r = data['r']
-sp = data['sp']
+sp = data['sp'] # subtract 1 to make 0-indexed
 
 num_actions = 4
 num_states = 100
@@ -26,65 +29,58 @@ def save_policy(policy, file_path):
         for si in range(100):
             f.write(f"{policy[si]}\n")
 
+
 class Sarsa:
     def __init__(self, state_space_size, action_space_size):
         self.Q = np.random.rand(state_space_size, action_space_size) * 0.01
         self.gamma = 0.95
         self.lr = 0.09
+        self.last = None #most recent experience tuple (s, a, r)
 
 sarsa = Sarsa(num_states, num_actions)
 
-def epsilon_greedy_policy(Q, state, epsilon=0.1):
-    """
-    Select an action using epsilon-greedy policy.
-    """
-    if np.random.rand() < epsilon:
-        return np.random.randint(len(Q[state]))  # Explore: random action
-    else:
-        return np.argmax(Q[state])  # Exploit: best action
 
-def sarsa_update(sarsa, state, action, reward, next_state, next_action):
-    """
-    Sarsa update rule.
-    """
-    sarsa.Q[state, action] += sarsa.lr * (
-        reward + (sarsa.gamma * sarsa.Q[next_state, next_action]) - sarsa.Q[state, action]
-    )
+def sarsa_update(sarsa, state, action, reward, next_state):
+    if sarsa.last != None:
+        # gamma = sarsa.gamma
+        # Q = sarsa.Q
+        # lr = sarsa.lr
+        # last = sarsa.last
+
+        sarsa.Q[sarsa.last['state'], sarsa.last['action']] += sarsa.lr * ( sarsa.last['reward'] + sarsa.gamma * sarsa.Q[state, action] - sarsa.Q[sarsa.last['state'], sarsa.last['action']] )
+    sarsa.last = {'state': state, 'action': action, 'reward': reward}
+    
     return sarsa
 
-def simulate(sarsa, s, a, r, sp, num_episodes=10, epsilon=0.1):
-    """
-    Simulate episodes for Sarsa learning.
-    """
+
+
+def simulate(sarsa, s, a, r, sp, num_episodes=100): 
     print("Running simulation")
     for episode in range(num_episodes):
         for i in range(len(s)):
+            # print(i)
             state = s[i]
             action = a[i]
             reward = r[i]
             next_state = sp[i]
-            
-            # Choose next action using epsilon-greedy policy
-            next_action = epsilon_greedy_policy(sarsa.Q, next_state, epsilon)
-            
-            # Perform Sarsa update
-            sarsa = sarsa_update(sarsa, state, action, reward, next_state, next_action)
+            # print(i)
+            # print(f"Episode: {episode}, State: {state}, Action: {action}, Reward: {reward}, Next State: {next_state}")
+            sarsa = sarsa_update(sarsa, state, action, reward, next_state)
 
     return sarsa
 
+
 def get_policy(sarsa):
-    """
-    Extract the optimal policy from the learned Q-table.
-    """
     policy = np.argmax(sarsa.Q, axis=1)
     return policy
 
-# Simulate Sarsa
-sarsa_opt = simulate(sarsa, s, a, r, sp)
-policy = get_policy(sarsa_opt)
+q_opt = simulate(sarsa, s, a, r, sp)
+policy = get_policy(q_opt) # add 1 to make 1-indexed
 
-# Save the resulting policy
-save_policy(policy, f"{dataset}_sarsa.policy")
+
+save_policy(policy, f"{dataset}.policy")
+
 
 t2 = time.time()
+
 print(f"Runtime: {t2-t1}")
