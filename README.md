@@ -26,7 +26,7 @@ We perform ablations of this MPC method for including reward shaping, backtracki
 ### Acknowledgements
 We thank the entire AA228/CS238 teaching team for their instruction and support throughout the quarter. We would like to specifically thank Dylan Asmar and Michelle Ho for offering their insights in approach and methods during office hours, and Prof. Kochenderfer for his instruction throughout the quarter.
 
-Checkout our full paper linked here: 
+Checkout our full paper linked [here](https://github.com/ankushDhawan5812/aa228-project/blob/main/aa228_report.pdf)!
 
 ## Repo Structure
 ### Requirements
