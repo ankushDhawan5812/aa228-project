@@ -3,7 +3,6 @@ from sample_trajectories import load_grid_with_positions, state_to_index
 from map_gen import plot_grid
 
 def load_trajectory(file_path):
-    """Load trajectory from a CSV file and return as a list of tuples."""
     import csv
     trajectory = []
     with open(file_path, mode='r') as file:
@@ -15,15 +14,6 @@ def load_trajectory(file_path):
     return trajectory
 
 def plot_trajectory_on_grid(grid, start_pos, goal_pos, trajectory):
-    """
-    Plot the trajectory on the grid with start and end points labeled.
-
-    Args:
-        grid (np.ndarray): The grid to plot.
-        start_pos (tuple): Coordinates of the starting position.
-        goal_pos (tuple): Coordinates of the goal position.
-        trajectory (list of tuples): The trajectory data as (s, a, r, sp).
-    """
     # Use plot_grid to visualize the base grid with start and goal positions
     plot_grid(grid, start_pos=start_pos, goal_pos=goal_pos)
 

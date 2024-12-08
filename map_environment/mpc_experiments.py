@@ -70,15 +70,6 @@ run_parameter_sweep(output_file_path)
 # x axis: revisit penalty
 # y axis: bias factor
 
-
-'''
-Selecting optimal thetas:
-find theta1, theta2 that minimize # steps to goal 
-:subject to 
-- must always reach the goal
-- must never hit an obstacle
-'''
-
 ## simulation runs
 # max_iters = 200
 # sweep results_2: 
@@ -91,18 +82,6 @@ find theta1, theta2 that minimize # steps to goal
 import pandas as pd
 
 def find_valid_and_optimal_thetas(data_path):
-    """
-    Finds all valid (theta1, theta2) pairs that satisfy the constraints:
-    - Reaches the goal 100% of the time across all maps.
-    - Computes the total average steps to goal for these pairs.
-    Additionally, identifies the optimal (theta1, theta2) that minimizes the total steps.
-
-    Parameters:
-        data_path (str): Path to the CSV file containing sweep results.
-
-    Returns:
-        tuple: A DataFrame of all valid parameters and the optimal (theta1, theta2) with minimum steps.
-    """
     # Load the CSV data
     data = pd.read_csv(data_path)
     

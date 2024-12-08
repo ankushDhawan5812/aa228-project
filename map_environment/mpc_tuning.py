@@ -261,26 +261,3 @@ def get_policy(q_learning):
 
 
 # visualize_optimal_actions(states, actions_opt, grid, start_state, goal_state)
-
-'''
-Results to record for each simulation:
-- steps to goal
-- Reached goal?
-- Ran into obstacle?
-
-
-Ablations:
-- on grid world 1: with/without revisit penalty and bias factor
-    - without revisit penalty, it just randomly walks and takes a super long time to find the goal
-    - without bias factor, it explores most of the map before getting to the goal 
-
-we dont actually need obstacle weight as a param, we can just make the revisit penalty and bias factor small
-'''
-
-'''
-Grid worlds:
-- 1: Single obstacle in the middle, with two ways around it
-- 2: Tunnel through a large wall of obstacles. Only one way through it
-- 3: Wall separating the center of the environment. Forces backtracking
-
-'''

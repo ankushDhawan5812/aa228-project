@@ -4,18 +4,6 @@ from matplotlib.colors import ListedColormap
 import csv
 
 def create_grid(size=(10, 10), start_pos=(0, 0), goal_pos=(9, 9), collision_positions=None):
-    """
-    Create a grid with specified start, goal, and collision positions.
-
-    Args:
-        size (tuple): Dimensions of the grid (rows, cols).
-        start_pos (tuple): Coordinates of the starting position.
-        goal_pos (tuple): Coordinates of the goal position.
-        collision_positions (list of tuples): Coordinates of obstacle positions.
-
-    Returns:
-        np.ndarray: The generated grid with rewards.
-    """
     grid = np.zeros(size)
 
     # Assign rewards
@@ -28,14 +16,6 @@ def create_grid(size=(10, 10), start_pos=(0, 0), goal_pos=(9, 9), collision_posi
     return grid
 
 def plot_grid(grid, start_pos, goal_pos):
-    """
-    Plot the grid with rewards, annotations, and properly formatted axes.
-
-    Args:
-        grid (np.ndarray): The grid to plot.
-        start_pos (tuple): Coordinates of the starting position.
-        goal_pos (tuple): Coordinates of the goal position.
-    """
     grid_shape = grid.shape
     cmap = ListedColormap(['lightcoral', 'white', 'lightgreen'])
     norm = plt.Normalize(vmin=-10, vmax=10)
@@ -62,15 +42,6 @@ def plot_grid(grid, start_pos, goal_pos):
     plt.title("Grid World")
 
 def save_grid(grid, start_pos, goal_pos, file_path):
-    """
-    Save the grid world to a CSV file with start and goal positions.
-
-    Args:
-        grid (np.ndarray): The grid to save.
-        start_pos (tuple): The starting position.
-        goal_pos (tuple): The goal position.
-        file_path (str): Path to save the grid CSV file.
-    """
     with open(file_path, mode='w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(['x', 'y', 'reward'])
